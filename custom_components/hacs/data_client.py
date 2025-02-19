@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 from typing import Any
-
+import json
 from aiohttp import ClientSession, ClientTimeout
 import voluptuous as vol
 
@@ -40,7 +40,7 @@ class HacsDataClient:
         endpoint = "/".join([v for v in [section, filename] if v is not None])
         try:
             response = await self._session.get(
-                f"https://data-v2.hacs.xyz/{endpoint}",
+                f"https://bitbucket.org/javisco/58_javis_addons/src/master/hacs/{endpoint}",
                 timeout=ClientTimeout(total=60),
                 headers={
                     "User-Agent": self._client_name,
@@ -58,7 +58,9 @@ class HacsDataClient:
             raise HacsException(f"Error fetching data from HACS: {exception}") from exception
 
         self._etags[endpoint] = response.headers.get("etag")
-
+        if response.content_type == "text/plain":
+            text_content = await response.text()
+            return json.loads(text_content)
         return await response.json()
 
     async def get_data(self, section: str | None, *, validate: bool) -> dict[str, dict[str, Any]]:

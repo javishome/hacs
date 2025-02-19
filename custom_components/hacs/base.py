@@ -840,7 +840,7 @@ class HacsBase:
         """Update all category repositories."""
         self.log.debug("Fetching updated content for %s", category)
         try:
-            category_data = await self.data_client.get_data(category, validate=True)
+            category_data = await self.data_client.get_data(category, validate=False)
         except HacsNotModifiedException:
             self.log.debug("No updates for %s", category)
             return
