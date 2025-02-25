@@ -8,7 +8,7 @@ class HacsGitHubRepo(StrEnum):
     """HacsGitHubRepo."""
 
     DEFAULT = "hacs/default"
-    INTEGRATION = "hacs/integration"
+    INTEGRATION = "javishome/hacs"
 
 
 class HacsCategory(StrEnum):

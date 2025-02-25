@@ -41,13 +41,13 @@
                 ],
                 "version_installed": "2.0.0"
             },
-            "172733314": {
+            "932091336": {
                 "category": "integration",
                 "default_branch": "main",
                 "description": "HACS gives you a powerful UI to handle downloads of all your custom needs.",
                 "domain": "hacs",
                 "full_name": "hacs/integration",
-                "id": "172733314",
+                "id": "932091336",
                 "installed": true,
                 "last_fetched": 1551193359.0,
                 "last_updated": "2023-11-18T21:22:03Z",
@@ -122,7 +122,7 @@
             "platform": "hacs",
             "state": "on",
             "translation_key": null,
-            "unique_id": "172733314"
+            "unique_id": "932091336"
         }
     ],
     "_hacs": {

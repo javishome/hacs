@@ -18,7 +18,7 @@ PACKAGE_NAME = "custom_components.hacs"
 DEFAULT_CONCURRENT_TASKS = 15
 DEFAULT_CONCURRENT_BACKOFF_TIME = 1
 
-HACS_REPOSITORY_ID = "172733314"
+HACS_REPOSITORY_ID = "932091336"
 
 HACS_ACTION_GITHUB_API_HEADERS = {
     "User-Agent": "HACS/action",
@@ -37,7 +37,7 @@ HACS (Home Assistant Community Store)
 Version: %s
 This is a custom integration
 If you have any issues with this you need to open an issue here:
-https://github.com/hacs/integration/issues
+https://github.com/javishome/hacs/issues
 -------------------------------------------------------------------
 """
 

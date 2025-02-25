@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   preflight:
-    if: ${{ github.repository == 'hacs/integration' }}
+    if: ${{ github.repository == 'javishome/hacs' }}
     runs-on: ubuntu-latest
     name: Preflight
     steps:
@@ -71,7 +71,7 @@ jobs:
     strategy:
       matrix:
         entry:
-          - repository: "hacs/integration"
+          - repository: "javishome/hacs"
             category: "integration"
           - repository: "piitaya/lovelace-mushroom"
             category: "plugin"
@@ -100,7 +100,7 @@ jobs:
     strategy:
       matrix:
         entry:
-          - repository: "hacs/integration"
+          - repository: "javishome/hacs"
             category: "integration"
           - repository: "piitaya/lovelace-mushroom"
             category: "plugin"
