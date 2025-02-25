@@ -42,7 +42,8 @@ jobs:
           cache-dependency-path: |
             requirements_base.txt
             requirements_lint.txt
-
+      - name: Make pip_packages executable
+        run: chmod +x scripts/install/pip_packages
       - name: Install dependencies
         run: |
           scripts/install/pip_packages --requirement requirements_lint.txt
